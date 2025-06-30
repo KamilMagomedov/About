@@ -16,7 +16,7 @@ const About: React.FC = () => {
 
 	const sendDataToBackend = async (data: typeof userData) => {
 		try {
-			const response = await axios.post('https://portfolio.laravelhub.kyiv.ua/api/user-visits', data, {
+			const response = await axios.post('https://portfolio.laravelhub.top/api/user-visits', data, {
 				headers: {
 					'Content-Type': 'application/json'
 				}

@@ -6,7 +6,7 @@ export const HTTP_INTERNAL_SERVER_ERROR = 500
 export const HTTP_UNPROCESSABLE_ENTITY = 422
 
 const instance = axios.create({
-	baseURL: 'https://portfolio.laravelhub.kyiv.ua/api/'
+	baseURL: 'https://portfolio.laravelhub.top/api/'
 })
 
 export const get = ({ path }: IGet) => {
