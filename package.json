@@ -14,7 +14,7 @@
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
-	"homepage": "https://github.com/KamilMagomedov",
+	"homepage": "https://KamilMagomedov.github.io/portfolio_mk",
 	"devDependencies": {
 		"@svgr/webpack": "^8.1.0",
 		"@types/node": "^17.0.45",
