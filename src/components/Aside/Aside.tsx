@@ -8,7 +8,7 @@ const Aside: React.FC = () => {
 	const { theme, userInfo, setUserInfo } = useContext(DataContext)
 	const { toggleTheme } = useTheme()
 	const [error, setError] = useState<string | null>(null)
-	console.log(userInfo, 111)
+
 	useEffect(() => {
 		const fetchSkillsInfo = async () => {
 			try {

@@ -1,5 +1,6 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import webpack from 'webpack'
+import Dotenv from 'dotenv-webpack'
 import { BuildOptions } from './types/config'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
@@ -14,9 +15,10 @@ export function buildPlugins({ paths }: BuildOptions, isDev: boolean): webpack.W
 			filename: 'css/[name].[contenthash:8].css',
 			chunkFilename: 'css/[name].[contenthash:8].css'
 		}),
-		new webpack.DefinePlugin({
-			'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL)
-		})
+		new webpack.ProvidePlugin({
+			process: 'process/browser.js'
+		}),
+		new Dotenv()
 	]
 
 	if (isDev) {
